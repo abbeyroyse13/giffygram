@@ -21,7 +21,7 @@
       "title": "What's happening?!"
     },
     {
-      "title": "testing testing ",
+      "title": "conRAD",
       "imageURL": "https://thumbs.gfycat.com/SpeedyPositiveDaddylonglegs-max-1mb.gif",
       "description": "just testing out posting ",
       "userId": 1,
@@ -35,6 +35,22 @@
       "userId": 1,
       "timestamp": 1616516046250,
       "id": 6
+    },
+    {
+      "title": "mothhhmaaaannnnn",
+      "imageURL": "https://64.media.tumblr.com/27f77f439cc3da93fe75c24e1516e6b5/tumblr_p7k1t9P3oz1txhu1do4_500.gifv",
+      "description": "adding anotha one",
+      "userId": 1,
+      "timestamp": 1616531971131,
+      "id": 7
+    },
+    {
+      "title": "i tried something & it didnt work lol",
+      "imageURL": "https://i.gifer.com/KvHh.gif",
+      "description": "test",
+      "userId": 1,
+      "timestamp": 1616532230436,
+      "id": 10
     }
   ],
   "messages": []
