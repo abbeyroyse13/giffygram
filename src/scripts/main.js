@@ -1,6 +1,6 @@
 // making sure you get all imports in is very (import)ant!!! hah
 // similarly, making sure all exports are right is just as im(ex)portant!!! haha
-import { getUsers, getPosts, usePostCollection, getLoggedInUser, createPost, deletePost, getSinglePost, updatePost, logoutUser, loginUser, registerUser, setLoggedInUser } from "./data/DataManager.js"
+import { getUsers, getPosts, usePostCollection, getLoggedInUser, createPost, deletePost, getSinglePost, updatePost, logoutUser, loginUser, registerUser, setLoggedInUser, postLike } from "./data/DataManager.js"
 import { PostList } from "./feed/PostList.js"
 import { NavBar } from "./nav/NavBar.js"
 import { Footer } from "./nav/Footer.js"
@@ -117,6 +117,20 @@ applicationElement.addEventListener("click", event => {
 })
 
 applicationElement.addEventListener("click", event => {
+    event.preventDefault();
+    if (event.target.id.startsWith("like")) {
+        const likeObject = {
+            postId: event.target.id.split("__")[1],
+            userId: getLoggedInUser().id
+        }
+        postLike(likeObject)
+            .then(response => {
+                showPostList();
+            })
+    }
+})
+
+applicationElement.addEventListener("click", event => {
         event.preventDefault();
         if (event.target.id.startsWith("updatePost")) {
             const postId = event.target.id.split("__")[1];
@@ -191,17 +205,24 @@ applicationElement.addEventListener("click", event => {
     })
     // define checkForUser; first step in sessionstoring something 
 const checkForUser = () => {
-        if (sessionStorage.getItem("user")) {
-            //this is expecting an object. Need to fix
-            // this is setting the logged in user, parsing (converting), sessionstoring an item (the user in this case), then giffygram can start
-            setLoggedInUser(JSON.parse(sessionStorage.getItem("user")));
-            startGiffyGram();
-        } else {
-            //show login/register
-            showLoginRegister();
-        }
+    if (sessionStorage.getItem("user")) {
+        //this is expecting an object. Need to fix
+        // this is setting the logged in user, parsing (converting), sessionstoring an item (the user in this case), then giffygram can start
+        setLoggedInUser(JSON.parse(sessionStorage.getItem("user")));
+        startGiffyGram();
+    } else {
+        //show login/register
+        showLoginRegister();
     }
-    // if user does not have acc, they must get registered first 
+}
+
+/*const authorCanEdit = () => {
+    if ()
+} else {
+
+}*/ // still thinking abt this
+
+// if user does not have acc, they must get registered first 
 const showLoginRegister = () => {
     showNavBar();
     const entryElement = document.querySelector(".entryForm");
