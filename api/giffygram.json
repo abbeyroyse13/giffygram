@@ -11,30 +11,27 @@
       "id": 2
     },
     {
-      "name": "",
-      "email": "",
+      "name": "abbey",
+      "email": "abbey@ar.com",
       "id": 3
-    },
-    {
-      "name": "danny",
-      "email": "danny@dt.com",
-      "id": 4
     }
   ],
   "posts": [
     {
-      "id": 2,
       "imageURL": "https://img.wattpad.com/14f18f5c1cfa93e2751eac7a95a141c320ce0d76/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f364f30382d446761616b666750673d3d2d3434353737323835342e313464343666333738333761393237353431313632363938303531362e676966",
-      "userId": 2,
+      "userId": 1,
       "description": "Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.\n\nDuis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.",
       "timestamp": 1561695022812,
-      "title": "What's happening?!"
+      "title": "What's happening?!",
+      "author": "Abbey's Post",
+      "id": 2
     },
     {
       "title": "conRAD",
       "imageURL": "https://thumbs.gfycat.com/SpeedyPositiveDaddylonglegs-max-1mb.gif",
       "description": "just testing out posting ",
-      "userId": 1,
+      "author": "Danny's Post",
+      "userId": 2,
       "timestamp": 1615478667099,
       "id": 5
     },
@@ -42,7 +39,8 @@
       "title": "HEYOOO ",
       "imageURL": "https://64.media.tumblr.com/013788d7b9aecd80b7f275ef5258e160/2abee33510d94dd3-ba/s540x810/075ffbc6353c8633a0aed7a0c68e994577d60f98.gifv",
       "description": "making sure you delete haha",
-      "userId": 1,
+      "author": "Danny's Post",
+      "userId": 2,
       "timestamp": 1616516046250,
       "id": 6
     },
@@ -50,6 +48,7 @@
       "title": "mothhhmaaaannnnn",
       "imageURL": "https://64.media.tumblr.com/27f77f439cc3da93fe75c24e1516e6b5/tumblr_p7k1t9P3oz1txhu1do4_500.gifv",
       "description": "adding anotha one",
+      "author": "Abbey's Post",
       "userId": 1,
       "timestamp": 1616531971131,
       "id": 7
@@ -58,10 +57,43 @@
       "title": "i tried something & it didnt work lol",
       "imageURL": "https://i.gifer.com/KvHh.gif",
       "description": "test",
+      "author": "Abbey's Post",
       "userId": 1,
       "timestamp": 1616532230436,
       "id": 10
     }
   ],
-  "messages": []
+  "messages": [],
+  "userLikes": [
+    {
+      "postId": "2",
+      "userId": 4,
+      "id": 2
+    },
+    {
+      "postId": "5",
+      "userId": 4,
+      "id": 3
+    },
+    {
+      "postId": "6",
+      "userId": 4,
+      "id": 4
+    },
+    {
+      "postId": "7",
+      "userId": 4,
+      "id": 5
+    },
+    {
+      "postId": "10",
+      "userId": 4,
+      "id": 6
+    },
+    {
+      "postId": "10",
+      "userId": 3,
+      "id": 7
+    }
+  ]
 }
